@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Hugo Lavieuville</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class='console-container'><span id='text'></span><div class='console-underscore' id='console'>&#95;</div></div>
+    </header>
+    <main>
+      <div class="sommaire">
+        <a href="index.html">Accueil</a>
+        <a href="index1.html">Formations</a>
+        <a href="index2.html">Passions</a>
+        <a href="index4.html">Projets</a>
+      </div>
+        <div class="biographie">
+          <img src="images/IMG_8686.webp" alt="Photo de Hugo Lavieuville" class="hugo">
+          <div class="biographie-flex">
+                <span>Je m'appelle Hugo Lavieuville, âgé de 19 ans, et je suis actuellement en formation de développeur web au CESI, avec une spécialisation en option fullstack. Passionné par le monde du développement, je m'efforce d'acquérir les compétences nécessaires pour exceller dans ce domaine en constante évolution.</span>
+                <div class="logo">
+                  <img src="images/HTML5_logo_and_wordmark.svg.webp" alt="logo HTML">
+                  <img src="images/CSS3_logo_and_wordmark.svg.webp" alt="logo CSS">
+                  <img src="images/Adobe_Photoshop_CC_icon.svg.webp" alt="logo Photoshop">
+                  <img src="images/Adobe_Premiere_Pro_CC_icon.svg.webp" alt="logo Première Pro">
+                  <img src="images/Adobe_Illustrator_CC_icon.svg.webp" alt="logo Illustrator">
+                  <img src="images/Canva_logo_png.webp" alt="logo Canva">
+                  <img src="images/Figma-logo.svg" alt="logo Figma">
+                  <img src="images/wordpress-6942722_1280.webp" alt="logo wordpress">
+                </div>
+            </div>
+        </div>
+        <div class="contact">
+          <h2>Contact</h2>
+          <div class="contact1">
+            <div class="mail">
+              <img src="images/lettre.png" alt="enveloppe">
+              <span>h.lavieuville@gmail.com</span>
+            </div>
+            <div class="tel">
+              <img src="images/telephone.png" alt="icone téléphone">
+              <span>06 78 46 14 25</span>
+            </div>
+              <div class="git">
+                <img src="images/GitHub-Mark-ea2971cee799.webp" alt="logo Github">
+                <a href="https://github.com/HugoLavi">HugoLavi</a>
+              </div>
+              <div class="linkdn">
+                <img src="images/LinkedIn_icon.svg.webp" alt="logo Linkdn">
+                <a href="https://www.linkedin.com/in/hugo-lavieuville/">Hugo Lavieuville</a>
+              </div>
+          </div>
+        </div>
+    </main>
+</body>
+</html>
+
+<script>   
+consoleText(['Hugo Lavieuville.', 'Développeur web.', 'Fullstack.'], 'text',['white','lightcoral','lightblue']);
+
+function consoleText(words, id, colors) {
+  if (colors === undefined) colors = ['#fff'];
+  var visible = true;
+  var con = document.getElementById('console');
+  var letterCount = 1;
+  var x = 1;
+  var waiting = false;
+  var target = document.getElementById(id)
+  target.setAttribute('style', 'color:' + colors[0])
+  window.setInterval(function() {
+
+    if (letterCount === 0 && waiting === false) {
+      waiting = true;
+      target.innerHTML = words[0].substring(0, letterCount)
+      window.setTimeout(function() {
+        var usedColor = colors.shift();
+        colors.push(usedColor);
+        var usedWord = words.shift();
+        words.push(usedWord);
+        x = 1;
+        target.setAttribute('style', 'color:' + colors[0])
+        letterCount += x;
+        waiting = false;
+      }, 1000)
+    } else if (letterCount === words[0].length + 1 && waiting === false) {
+      waiting = true;
+      window.setTimeout(function() {
+        x = -1;
+        letterCount += x;
+        waiting = false;
+      }, 1000)
+    } else if (waiting === false) {
+      target.innerHTML = words[0].substring(0, letterCount)
+      letterCount += x;
+    }
+  }, 120)
+  window.setInterval(function() {
+    if (visible === true) {
+      con.className = 'console-underscore hidden'
+      visible = false;
+
+    } else {
+      con.className = 'console-underscore'
+
+      visible = true;
+    }
+  }, 400)
+}
+</script>
