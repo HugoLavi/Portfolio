@@ -1,0 +1,385 @@
+@font-face {
+    font-family: "font1";
+    src: url(font/GothamBook.ttf);
+}
+
+*{
+    font-family: "font1";
+}
+
+body{
+    background-color: #101010;
+    margin: 0;
+    padding: 0;
+}
+
+span{
+    color: white;
+}
+
+h1{
+    text-align: center;
+    font-family: "font1";
+    color: #fff;
+    font-size: 300%;
+}
+
+.accueil{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.accueil p{
+    color: white;
+    font-size: 150%;
+    text-align: center;
+}
+
+.texte-intro{
+    margin-top: 5%;
+}
+
+
+.cube{
+    width: 400px;
+    height: 400px;
+    background-image: url(images/icones/IMG_8686.webp);
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.competence{
+    display: flex;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    opacity: 0.95;
+    height: 135px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer img {
+    width: 50px;
+    height: 40px;
+}
+
+.musique-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img-play {
+    margin-left: 35px;
+    margin-right: 35px;
+}
+
+.bouton-musique {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1%;
+}
+
+.progress-container {
+    width: 250%;
+    height: 12px;
+    background-color: grey;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-top: 10%;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #fff;
+    border-radius: 15px;
+    width: 0;
+    transition: width 0.3s ease-in-out;
+}
+
+.navbar a{
+    margin-bottom: 3%;
+    display: inline-block;
+    padding: 5px 5px;
+    text-decoration: none;
+    background-color: black;
+    color: #ffffff;
+    border: 2px solid black;
+    border-radius: 5px;
+    transition: opacity 0.3s, transform 0.3s;
+    width: 20%;
+    font-family: "font1";
+    font-size: 300%;
+    text-align: center;
+}
+
+.navbar a:hover{
+    opacity: 0.8;
+    transform: scale(1.05);
+    border: 2px solid white;
+}
+
+.navbar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3%;
+}
+
+.bg-image{
+    position: relative;
+    width: 100%;
+    height: 85vh;
+    background-image: url(images/parcours/codeur-scaled.jpeg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+
+.bg-image::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.55);
+}
+
+.parcours-container{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.parcours-container ul{
+    list-style-type: none;
+}
+
+
+.parcours-footer{
+    margin-top: 0;
+}
+
+.parcours-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.parcours-container h1 {
+    font-size: 300%;
+    margin-bottom: 10%;
+}
+  
+.parcours-container > div {
+    margin-bottom: 30px;
+}
+  
+.parcours-container h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+  
+.parcours-container ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+  
+.parcours-container li {
+    margin-bottom: 5px;
+}
+  
+.lycee-container,
+.licence-container,
+.facteur-container,
+.cesi-container {
+    border-left: 4px solid #3498db;
+    padding-left: 10px;
+}
+  
+.cesi-container {
+    border-left: 4px solid #27ae60;
+}
+  
+.lycee-container li:nth-child(2) {
+    font-weight: bold;
+}
+  
+.licence-container li:nth-child(2) {
+    font-style: italic;
+}
+
+.digiactif-container li:nth-child(2),
+.cesi-container li:nth-child(2) {
+    font-weight: bold;
+}
+
+.digiactif-container li:nth-child(4),
+.lycee-container li:nth-child(3),
+.licence-container li:nth-child(3),
+.facteur-container li:nth-child(2),
+.cesi-container li:nth-child(3) {
+    color: #ffffff9d;
+}
+
+.digiactif-container {
+    border-left: 4px solid #27ae60;
+    padding-left: 10px;
+  }
+
+.project-container {
+    margin: 5% auto;
+}
+
+.partie3-project,
+.partie2-project,
+.partie1-project{
+    display: flex;
+}
+
+.project {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 5%;
+}
+  
+.couverture {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    border: #101010 solid 1px;
+}
+  
+.description {
+    margin-top: 15px;
+}
+
+.description h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+  
+.description p {
+    font-size: 16px;
+}
+  
+.button {
+    display: inline-block;
+    font-size: 135%;
+    font-weight: bold;
+    padding: 15px 85px;
+    background-color: black;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+  
+.button:hover {
+    transform: scale(1.1);
+}
+  
+.icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 5%;
+    margin: 20px;
+}
+
+
+.passions-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 130px;
+    opacity: 0; /* Les cartes sont initialement cachées */
+    transform: translateY(20px); /* Les cartes sont initialement décalées vers le bas */
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.card h2 {
+    color: #333;
+    margin-top: 10px;
+}
+
+@media (max-width: 400px){
+
+    .cube{
+        width: 300px;
+        height: 300px;
+    }
+
+    .progress-container{
+        width: 100%;
+    }
+
+    .icon{
+        width: 40px;
+        height: 40px;
+    }
+
+    .competence{
+        margin-bottom: 10%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .parcours-container{
+        margin-top: 37%;
+    }
+
+    .bg-image{
+        background: none;
+    }
+
+    .bg-image::after{
+        background-color: #101010;
+    }
+
+    .partie1-project,
+    .partie2-project,
+    .partie3-project{
+        flex-direction: column;
+    }
+
+    .navbar a{
+        font-size: 32px;
+        width: 50%;
+        margin-bottom: 10%;
+    }
+
+    .accueil p{
+        margin: 5% 3%;
+    }
+}
