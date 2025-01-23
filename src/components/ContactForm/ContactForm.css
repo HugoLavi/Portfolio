@@ -1,0 +1,119 @@
+  .contact-form-section {
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #f0f8f5, #dff7e9);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 16px;
+    max-width: 1200px;
+    margin: 50px auto;
+    border: 2px solid #3BAA34;
+  }
+  
+  .contact-form-container {
+    text-align: center;
+  }
+  
+  .contact-form-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: black;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-form-container p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #555;
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-form.submitted {
+    opacity: 0.8;
+    pointer-events: none;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #3BAA34;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    background: #f9f9f9;
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-color: #3BAA34;
+    outline: none;
+    background: #e6f6e9;
+  }
+  
+  textarea {
+    resize: none;
+  }
+  
+  .submit-button {
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #3BAA34;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .submit-button:hover {
+    opacity: 0.8;
+    transform: translateY(-2px);
+  }
+  
+  .submit-button:active {
+    transform: translateY(0);
+  }
+  
+  .success-message {
+    margin-top: 20px;
+    font-size: 1.1rem;
+    color: #3BAA34;
+    font-weight: bold;
+  }
+  
+  @media (max-width: 768px) {
+    .contact-form-section {
+      padding: 30px 15px;
+    }
+  
+    .contact-form-container h1 {
+      font-size: 1.8rem;
+    }
+  
+    .contact-form-container p {
+      font-size: 0.9rem;
+    }
+  }
+  

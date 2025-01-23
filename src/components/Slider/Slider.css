@@ -1,0 +1,28 @@
+.slider {
+    overflow: hidden;
+    padding: 100px 0;
+    white-space: nowrap;
+  }
+  
+  .slider-items {
+    animation: 35s slide infinite linear;
+    display: inline-block;
+  }
+  
+  .slider:hover .slider-items {
+    animation-play-state: paused;
+  }
+  
+  .slider-items img {
+    height: 100px;
+    margin: 0 60px;
+  }
+  
+  @keyframes slide {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
