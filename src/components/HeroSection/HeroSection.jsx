@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "./HeroSection.css";
 import imgGecko from "../../assets/images/gecko-container.png";
-import cv from "../../assets/cv-hugo.pdf";
+import cv from "../../assets/cv1.pdf";
 
 const HeroSection = () => {
   useEffect(() => {
