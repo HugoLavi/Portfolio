@@ -8,6 +8,7 @@ const AboutSection = () => {
   return (
     <section className="about" id="about">
       <div className="about-container">
+        <span className="section-eyebrow">Passions</span>
         <h1>À propos de moi</h1>
         <p>
           Voici trois éléments qui définissent mes inspirations et mes passions.

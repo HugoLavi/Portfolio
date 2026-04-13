@@ -23,9 +23,9 @@ const HeroSection = () => {
         <div className="texte">
           <h1>Salut, je suis Hugo Lavieuville</h1>
           <h2>
-            Étudiant en 2ème année de{" "}
-            <span className="vert-sous-titre">développeur web</span> au CESI de
-            Rouen
+            Étudiant en 3ème année de{" "}
+            <span className="vert-sous-titre">développeur informatique</span> à
+            Ynov campus Lille
           </h2>
           <p>
             Découvrez ici mon parcours, mes projets, et mes passions. À travers

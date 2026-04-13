@@ -43,6 +43,7 @@ const ContactForm = () => {
   return (
     <section className="contact-form-section" id="contact">
       <div className="contact-form-container">
+        <span className="section-eyebrow">Contact</span>
         <h1>Contactez-moi</h1>
         <p>
           N'hésitez pas à me laisser un message, je vous répondrai rapidement !
